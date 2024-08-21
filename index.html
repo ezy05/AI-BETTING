@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -127,6 +128,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="welcome-page" class="page active">
         <img src="welcome.png" class="background" alt="Welcome Background">
@@ -137,17 +139,17 @@
     </div>
 
     <div id="main-page" class="page hidden">
-        <img src="app.png" class="background" alt="App Background">
+        <video src="app.mp4" class="background" autoplay muted loop></video>
         <div class="content center">
             <img src="logo.png" class="logo" alt="App Logo">
             <p>Available Leagues:<br>
-            - Romania<br>
-            - France<br>
-            - Italy<br>
-            - England<br>
-            - Germany<br>
-            - Spain<br>
-            - AND MORE...</p>
+                - Romania<br>
+                - France<br>
+                - Italy<br>
+                - England<br>
+                - Germany<br>
+                - Spain<br>
+                - AND MORE...</p>
             <input type="text" id="team1" placeholder="Home team">
             <input type="text" id="team2" placeholder="Away team">
             <button class="Btn" onclick="predict()"><span>Predict</span></button>
@@ -157,7 +159,7 @@
     </div>
 
     <div id="history-page" class="page hidden">
-        <img src="app.png" class="background" alt="App Background">
+        <video src="app.mp4" class="background" autoplay muted loop></video>
         <div class="content center">
             <button class="Btn" onclick="deleteHistory()"><span>Delete History</span></button>
             <button class="Btn" onclick="showMainPage()"><span>Back</span></button>
@@ -187,7 +189,7 @@
                 localStorage.removeItem('history');
                 localStorage.removeItem('predictionCache');
             }
-            
+
             showWelcomePage();
         });
 
@@ -254,4 +256,5 @@
         }
     </script>
 </body>
+
 </html>
